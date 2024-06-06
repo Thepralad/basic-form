@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        textarea{
+            resize: none;
+        }
+    </style>
 </head>
 <body>
     <form action="https://httpbin.org/post" method="post">
-        <label for="name">NAME:</label>
-        <input type="text" name="name" id="name">
-        <label for="age">AGE:</label>
-        <input type="number" name="age" id="age">
-        <input type="submit">
+        <fieldset>
+            <legend>Contact Details</legend>
+          
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number">
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </fieldset>
+          
+          <fieldset>
+            <legend>What would you like to drink?</legend>
+          
+            <div>
+              <input type="radio" name="drink" id="coffee" value="coffee">
+              <label for="coffee">Coffee</label>
+            </div>
+          
+            <div>
+              <input type="radio" name="drink" id="tea" value="tea">
+              <label for="tea">Tea</label>
+            </div>
+          
+            <div>
+              <input type="radio" name="drink" id="soda" value="soda">
+              <label for="soda">Soda</label>
+            </div>
+          </fieldset>
     </form>
 </body>
 </html>
